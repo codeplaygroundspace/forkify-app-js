@@ -1,4 +1,9 @@
-node_modules
-dist
-.parcel-cache
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.parcel-cache/
+
+# System files
 .DS_Store
