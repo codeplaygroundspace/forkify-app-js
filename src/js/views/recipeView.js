@@ -1,10 +1,10 @@
-import icons from "url:../../img/icons.svg";
 import View from "./View";
-import { addBookmark } from "../model";
 
+import icons from "url:../../img/icons.svg";
+import { Fraction } from "fractional";
 class RecipeView extends View {
   _parentElement = document.querySelector(".recipe");
-  _errorMessage = "We could not find the recipe. Please try another one!";
+  _errorMessage = "We could not find that recipe. Please try another one!";
   _message = "Start by searching for a recipe or an ingredient. Have fun!";
 
   addHandlerRender(handler) {
@@ -26,7 +26,6 @@ class RecipeView extends View {
   addHandlerAddBookmark(handler) {
     this._parentElement.addEventListener("click", function (e) {
       const btn = e.target.closest(".btn--bookmark");
-      console.log(btn);
       if (!btn) return;
       handler();
     });
